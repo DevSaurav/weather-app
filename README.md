@@ -60,7 +60,12 @@ This is a weather forecasting application built with **Laravel 12**, **Sanctum**
    ```bash
    $ php artisan test
 
-8. **Using postman collection for API**  
+8. **Run the unit test**  
+   ```bash
+   $ php artisan queue:work # start the welcome email notification job, use --queue=UpdateWeatherData to start a job for weather update
+   $ php artisan queue:listen # listen to the status of jobs being processed, use --queue=UpdateWeatherData to listen to the jobs from weather update
+
+9. **Using postman collection for API**  
    ```bash
    Import the postman_collection file from the root folder.
    Hit the POST api/register to register, change the default name to your name.
